@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% 
+            function numeroAleatorioDoIntervalo(min,max){ return Math.floor(Math.random()*(max-min+1)+min); }
+
+            indiceAleatorioDeMaos1 = numeroAleatorioDoIntervalo(0, maos.length - 1);
+            indiceAleatorioDeObjetos1 = numeroAleatorioDoIntervalo(0, objetos.length - 1);
+            indiceAleatorioDeMateriais1 = numeroAleatorioDoIntervalo(0, materiais.length - 1);
+            indiceAleatorioDePropriedades1 = numeroAleatorioDoIntervalo(0, propriedades.length - 1);
+            indiceAleatorioDeTamanhos1 = numeroAleatorioDoIntervalo(0, tamanhos.length - 1);
+            indiceAleatorioDeSimbolos1 = numeroAleatorioDoIntervalo(0, simbolos.length - 1);
+            indiceAleatorioDeCorSímbolo1 = numeroAleatorioDoIntervalo(0, cores.length - 1);
+
+            indiceAleatorioDeMaos2 = numeroAleatorioDoIntervalo(0, maos.length - 1); 
+            indiceAleatorioDeObjetos2 = numeroAleatorioDoIntervalo(0, objetos.length - 1); 
+            indiceAleatorioDeMateriais2 = numeroAleatorioDoIntervalo(0, materiais.length - 1); 
+            indiceAleatorioDePropriedades2 = numeroAleatorioDoIntervalo(0, propriedades.length - 1);
+            indiceAleatorioDeTamanhos2 = numeroAleatorioDoIntervalo(0, tamanhos.length - 1); 
+            indiceAleatorioDeSimbolos2 = numeroAleatorioDoIntervalo(0, simbolos.length - 1); 
+            indiceAleatorioDeCorSímbolo2 = numeroAleatorioDoIntervalo(0, cores.length - 1); 
+            indiceAleatorioPreenchimento = numeroAleatorioDoIntervalo(0, preenchimento.length - 1); 
+            indiceAleatorioSubstancia = numeroAleatorioDoIntervalo(0, subtancia.length - 1); 
+
+            indiceAleatorioDeMaos3 = numeroAleatorioDoIntervalo(0, maos.length - 1); 
+            indiceAleatorioDeObjetos3 = numeroAleatorioDoIntervalo(0, objetos.length - 1); 
+            indiceAleatorioDeMateriais3 = numeroAleatorioDoIntervalo(0, materiais.length - 1); 
+            indiceAleatorioDeTamanhos3 = numeroAleatorioDoIntervalo(0, tamanhos.length - 1); 
+            indiceAleatorioDeSimbolos3 = numeroAleatorioDoIntervalo(0, simbolos.length - 1); 
+            indiceAleatorioDeCorSímbolo3 = numeroAleatorioDoIntervalo(0, cores.length - 1); 
+        %>
+        <meta charset="UTF-8">
+        <title>View</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <style>
+            body{
+                background-color: #1d1d1d;
+            }
+            .container{
+                margin-top : 50px;
+                text-align : center;
+                color : #dfdfdf;
+                font-family: Tahoma, sans-serif;
+                font-size: 14px;
+                background-color: #383838;
+                padding: 20px;
+                line-height: 2;
+                text-justify: auto;
+            }
+            span {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="jumbotron container">
+
+            <p> <!-- Primeiro Objeto -->
+                Imagine
+                <span><%= maos[indiceAleatorioDeMaos1]; %></span>
+                com a palma da mão para cima, estendida em sua frente sobre a mesa.
+            <br>
+                Visualize sobre ela
+                <span><%= objetos[indiceAleatorioDeObjetos1]; %></span>
+                <span><%= materiais[indiceAleatorioDeMateriais1]; %></span>, com cerca de
+                <span><%= tamanhos[indiceAleatorioDeTamanhos1]; %></span> de lado, com o símbolo
+                <span><%= simbolos[indiceAleatorioDeSimbolos1]; %></span> impresso em cor
+                <span><%=cores[indiceAleatorioDeCorSímbolo1]; %></span>.
+            <br>
+                Manuseie-o. Observe todas as suas faces. Sinta sua temperatura e rugosidade. Passe-o para sua outra mão e examine-o novamente.
+                Coloque o objeto na mesa, escutando o barulho que ele faz ao ser largado.
+            </p>
+
+            <p> <!-- Segundo Objeto -->
+                Visualize agora em 
+                <span><%= maos[indiceAleatorioDeMaos2]; %></span>, 
+                <span><%= objetos[indiceAleatorioDeObjetos2]; %></span>
+                <span><%= materiais[indiceAleatorioDeMateriais2]; %></span>, oco(a), com cerca de 
+                <span><%= tamanhos[indiceAleatorioDeTamanhos2]; %></span> de ladoe e com o símbolo
+                <span><%= simbolos[indiceAleatorioDeSimbolos2]; %></span> impresso em cor
+                <span><%=cores[indiceAleatorioDeCorSímbolo2]; %></span>.
+
+            <br>
+                    Preencha-o 
+                    <span><%=preenchimento[indiceAleatorioPreenchimento]; %></span> de
+                    <span><%=subtancia[indiceAleatorioSubstancia]; %></span>.
+            <br>
+                O Examine, sinta a temperatura, a rugosidade e as imperfeições.
+                Veja como o conteúdo se movimenta, sinta o cheiro que exala deste objeto. 
+                Coloque-o na mesa, ao lado do primeiro objeto.
+            </p>
+            <p>
+                Lembre-se de sempre manter a imagem mental dos objetos anteriores em cima de sua mesa.
+            </p>
+            <p> <!-- Terceiro Objeto -->
+                Finalmente, visualize agora em
+                <span><%= maos[indiceAleatorioDeMaos3]; %></span>,
+                <span><%= objetos[indiceAleatorioDeObjetos3]; %></span>
+                <span><%= materiais[indiceAleatorioDeMateriais3]; %></span>, transparente, com
+                <span><%= tamanhos[indiceAleatorioDeTamanhos3]; %></span> de lado, com o símbolo
+                <span><%= simbolos[indiceAleatorioDeSimbolos3]; %></span> impresso na cor
+                <span><%=cores[indiceAleatorioDeCorSímbolo3]; %></span>.
+            <br>
+                Este objeto brilha, emanando uma luminosidade que afeta todo o ambiente onde você está. Manuseie-o e observe como esta luz afeta os outros objetos.
+            </p>
+            <p>
+                Agora, com sua mão, dissolva o primeiro objeto até que ele vire um punhado de pó, que permanece sobre a mesa. Faça o mesmo com o segundo objeto, que se dissolverá em uma nuvem de fumaça com o cheiro de plástico; Dissolva o terceiro objeto e faça com que o líquido se misture ao pó do primeiro objeto. Junte com as duas mãos todo o material que sobrou dos três objetos e transforme-os em uma pequena bola de luz. Faça com que ela fique cada vez menor até sumir na palma de sua mão.
+            </p>
+            <p style="text-align: right">Fim do exercício.</p>
+        </div>
+    </body>
+</html>
